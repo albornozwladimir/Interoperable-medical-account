@@ -1,57 +1,57 @@
 {
-   'data': {
-       'MSH': {
-           'app_origen': 'aplicacion que envia',
-           'codigo_origen': 'codigo de establecimiento',
-           'rut_origen': 'rut_origen',
-           'tipo_universal_id_origen': 'DEIS',                
-           'app_destino': 'aplicacion que recibe',
-           'codigo_destino': 'codigo de establecimiento',
-           'rut_destino': 'rut_destino',
-           'tipo_universal_id_destino': 'RUT'                
-       },
-       'EVN': {
-           'fecha_hora_evento': '20170722093000-0400'
-       },
-       'PID': {
-           'identificadores': [
-               {
-                   'numero_documento': 'ID identificación(sin verificador)',
-                   'verificador_numero': 'ID identificación(solo verificador)',
-                   'tipo_documento': 'NI',
-                   'codigo_pais': '152'
-               },
-               {
-                   'numero_documento': 'ID2 identificación(sin verificador)',
-                   'verificador_numero': 'ID identificación(solo verificador)',
-                   'tipo_documento': 'NI',
-                   'codigo_pais': '152'
-               }
-           ],
-           'primer_apellido': 'Primer apellido y nombres',
-           'primer_nombre': 'Primer apellido y nombres',
-           'segundo_nombre': 'Primer apellido y nombres',
-           'segundo_apellido': 'Segundo apellido'
-       },
-       'PV1': {
-           'tipo_encuentro': '3',
-           'id_encuentro_propio': 'ID encuentro propio',
-           'medico_tratante': [
-               {
-                   'rut_tratante': 'RUT del profesional'
-               }
-           ]
-       },
-       'PR1': [
-           {
-               'fecha_hora_evento': '20170520202020-0400'
-           }
-       ],
-       'IN1': [
-           {
-               'leyes_previsionales': '02',
-               'prevision': '03'
-           }
-       ]
-   }
+  "data": {
+    "EVN": {
+      "fecha_hora_evento": "20170722093000-0400"
+    },
+    "IN1": [
+      {
+        "leyes_previsionales": "02",
+        "prevision": "03"
+      }
+    ],
+    "MSH": {
+      "app_destino": "aplicacion que recibe",
+      "app_origen": "aplicacion que envia",
+      "codigo_destino": "codigo de establecimiento",
+      "codigo_origen": "codigo de establecimiento",
+      "rut_destino": "rut_destino",
+      "rut_origen": "rut_origen",
+      "tipo_universal_id_destino": "RUT",
+      "tipo_universal_id_origen": "DEIS"
+    },
+    "PID": {
+      "identificadores": [
+        {
+          "codigo_pais": "152",
+          "numero_documento": "ID identificación(sin verificador)",
+          "tipo_documento": "NI",
+          "verificador_numero": "ID identificación(solo verificador)"
+        },
+        {
+          "codigo_pais": "152",
+          "numero_documento": "ID2 identificación(sin verificador)",
+          "tipo_documento": "NI",
+          "verificador_numero": "ID identificación(solo verificador)"
+        }
+      ],
+      "primer_apellido": "Primer apellido y nombres",
+      "primer_nombre": "Primer apellido y nombres",
+      "segundo_apellido": "Segundo apellido",
+      "segundo_nombre": "Primer apellido y nombres"
+    },
+    "PR1": [
+      {
+        "fecha_hora_evento": "20170520202020-0400"
+      }
+    ],
+    "PV1": {
+      "id_encuentro_propio": "ID encuentro propio",
+      "medico_tratante": [
+        {
+          "rut_tratante": "RUT del profesional"
+        }
+      ],
+      "tipo_encuentro": "3"
+    }
+  }
 }
