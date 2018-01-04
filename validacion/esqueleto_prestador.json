@@ -37,32 +37,32 @@
         "PID.3.4": "AA_RegistroCivil", // Entidad que emite el rut (Temporalmente string "RegistroCivil")
         "PID.3.5": "NI", // Tipo de documento (tabla 20)
         "PID.3.9": {
-          "PID.3.9.1": "152",
-          "PID.3.9.2": "Chile",
-          "PID.3.9.3": "ISO3166-1"
+          "PID.3.9.1": "152", // Código país emisor del documento
+          "PID.3.9.2": "Chile", // Pais emisor de documento
+          "PID.3.9.3": "ISO3166-1" // NOrma utilizada para codificación de país
         }
       },
-      "PID.5": {
-        "PID.5.1": "Perez",
-        "PID.5.2": "Rigoberto",
-        "PID.5.3": "Ignacio"
+      "PID.5": { //Identificación del paciente
+        "PID.5.1": "Perez", // Primer apellido
+        "PID.5.2": "Rigoberto", // Primer nombre
+        "PID.5.3": "Ignacio" // Segundo nombre
       },
-      "PID.6": { "PID.6.1": "Gonzalez" }
+      "PID.6": { "PID.6.1": "Gonzalez" } // Segundo apellido
     },
     "PV1": {
-      "PV1.2": { "PV1.2.1": "3" },
-      "PV1.5": { "PV1.5.1": "346482" },
-      "PV1.7": { "PV1.7.1": "99048675" }
+      "PV1.2": { "PV1.2.1": "3" }, // Valor 1:Urgencia, 2:Hospitalizados y 3:Ambulatorio
+      "PV1.5": { "PV1.5.1": "346482" }, // ID de encuentro propio del sistema del prestador
+      "PV1.7": { "PV1.7.1": "99048675" } // Run médico tratante, solo en caso ambulatorio
     },
     "PR1": {
-      "PR1.1": { "PR1.1.1": "01" },
-      "PR1.3": { "PR1.3.1": "3" },
-      "PR1.5": { "PR1.5.1": "20171123164500-0400" }
+      "PR1.1": { "PR1.1.1": "01" }, // Número de transacción, valor incremental
+      "PR1.3": { "PR1.3.1": "3" }, // Codigo del tipo de encuentro 1:Hospitalizados, 2:Urgencia y 3:Ambulatorio
+      "PR1.5": { "PR1.5.1": "20171123164500-0400" } //Fecha y hora del encuentro YYYYMMDDhhmmss+-ZZZZ
     },
     "IN1": {
-      "IN1.1": { "IN1.1.1": "1" },
-      "IN1.2": { "IN1.2.1": "96" },
-      "IN1.3": { "IN1.3.1": "01" }
+      "IN1.1": { "IN1.1.1": "1" }, // Contador del segmento, predeterminado 1
+      "IN1.2": { "IN1.2.1": "96" }, // Lyes previsionales "Tabla 0072 - Leyes previsionales" DEIS: Decreto ex. 643/2016
+      "IN1.3": { "IN1.3.1": "01" } //Previsión 01:Fonasa, 02:Isapre, 03:Capredena, 04:Dipreca, 05:SISA
     }
   }
 }
