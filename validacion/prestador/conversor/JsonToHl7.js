@@ -1,4 +1,5 @@
 // Conversor para MirthConnect Json to HL7 v2.x
+// Para SOURCE TRANSFORMER
 
 //MSH
 tmp['MSH']['MSH.1'] = msg['MSH']['MSH.1']; // Separador de campo
@@ -59,3 +60,12 @@ tmp['PID']['PID.5']['PID.5.2'] = msg['PID']['PID.5']['PID.5.2'];// Primer nombre
 tmp['PID']['PID.5']['PID.5.3'] = msg['PID']['PID.5']['PID.5.3'];// Segundo nombre
 //PID6
 tmp['PID']['PID.6']['PID.6.1'] = msg['PID']['PID.6']['PID.6.1'];// Segundo apellido
+
+//PV1
+tmp['PV1']['PV1.1']['PV1.1.1'] = msg['PV1']['PV1.1']; //Vacío
+tmp['PV1']['PV1.2']['PV1.2.1'] = msg['PV1']['PV1.2']['PV1.2.1']; //Tipo de encuentro [1,2,3] Tabla 0004
+tmp['PV1']['PV1.3']['PV1.3.1'] = msg['PV1']['PV1.3']; //Vacío
+tmp['PV1']['PV1.4']['PV1.4.1'] = msg['PV1']['PV1.4']; //Vacío
+tmp['PV1']['PV1.5']['PV1.5.1'] = msg['PV1']['PV1.5']['PV1.5.1'];// Id de paciente entregado por Hospital
+tmp['PV1']['PV1.6']['PV1.6.1'] = msg['PV1']['PV1.6']; //Vacío
+tmp['PV1']['PV1.7']['PV1.7.1'] = msg['PV1']['PV1.7']['PV1.7.1']; //Run medico tratante y/o equipo (Solo ambulatorio, Hosp y Emergencia no aplica)
