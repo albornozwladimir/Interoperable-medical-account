@@ -1,5 +1,6 @@
 // Conversor para MirthConnect Json to HL7 v2.x
-// Para SOURCE TRANSFORMER
+// Para SOURCE TRANSFORMER con mensaje de entrada JSON
+// Se recomienda que se separe el código Javascript según cada segmento
 
 //MSH
 tmp['MSH']['MSH.1'] = msg['MSH']['MSH.1']; // Separador de campo
@@ -69,3 +70,15 @@ tmp['PV1']['PV1.4']['PV1.4.1'] = msg['PV1']['PV1.4']; //Vacío
 tmp['PV1']['PV1.5']['PV1.5.1'] = msg['PV1']['PV1.5']['PV1.5.1'];// Id de paciente entregado por Hospital
 tmp['PV1']['PV1.6']['PV1.6.1'] = msg['PV1']['PV1.6']; //Vacío
 tmp['PV1']['PV1.7']['PV1.7.1'] = msg['PV1']['PV1.7']['PV1.7.1']; //Run medico tratante y/o equipo (Solo ambulatorio, Hosp y Emergencia no aplica)
+
+//PR1
+tmp['PR1']['PR1.1']['PR1.1.1'] = msg['PR1']['PR1.1']['PR1.1.1'];//Número de transacción(incremental)
+tmp['PR1']['PR1.2']['PR1.2.1'] = msg['PR1']['PR1.2'];//Vacío
+tmp['PR1']['PR1.3']['PR1.3.1'] = msg['PR1']['PR1.3']['PR1.3.1'];//Código tipo de encuentro (tabla 0004)
+tmp['PR1']['PR1.4']['PR1.4.1'] = msg['PR1']['PR1.4'];//Vacío
+tmp['PR1']['PR1.5']['PR1.5.1'] = msg['PR1']['PR1.5']['PR1.5.1'];//Hora-Fecha del evento (YYYYMMDDhhmmss[+-]ZZZZ)
+
+//IN1
+tmp['IN1']['IN1.1']['IN1.1.1'] = msg['IN1']['IN1.1']['IN1.1.1'];//Contador de segmento(predeterminado 1)
+tmp['IN1']['IN1.2']['IN1.2.1'] = msg['IN1']['IN1.2']['IN1.2.1'];//Leyes provisionales ([T27]Tabla 0072-Leyes provisionales)
+tmp['IN1']['IN1.3']['IN1.3.1'] = msg['IN1']['IN1.3']['IN1.3.1'];//Previsión (Tabla 28 DEIS:Decreto ex.643/2016)
