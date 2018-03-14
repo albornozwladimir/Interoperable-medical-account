@@ -2,22 +2,35 @@
 // Para SOURCE TRANSFORMER con mensaje de entrada JSON
 // Se recomienda que se separe el código Javascript según cada segmento
 
+// Functions
+function ISODate(){
+	var fecha = new Date();
+	var anio = fecha.getUTCFullYear();
+	var month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+	var day = ("0" + fecha.getDate()).slice(-2);
+	var hour = ("0" + fecha.getHours()).slice(-2);
+	var minute = ("0" + fecha.getMinutes()).slice(-2);
+	var second = ("0" + fecha.getSeconds()).slice(-2);
+	var ISO = anio+''+month+''+day+''+hour+''+minute+''+second+'-0400';	
+	return ISO;
+}
+
 //MSH
 tmp['MSH']['MSH.1'] = msg['MSH']['MSH.1']; // Separador de campo
 tmp['MSH']['MSH.2'] = "^~\&"; // Codificación de caracteres
 tmp['MSH']['MSH.3']['MSH.3.1'] = msg['MSH']['MSH.3']['MSH.3.1']; // Nombre aplicación que envía
 //MSH4
-tmp['MSH']['MSH.4']['MSH.4.1'] = msg['MSH']['MSH.4']['MSH.4.1']; // Cod. establecimiento (Predefinido '0 Fonasa')
+tmp['MSH']['MSH.4']['MSH.4.1'] = msg['MSH']['MSH.4']['MSH.4.1']; // Cod. establecimiento que envía(Predefinido '0 Fonasa')
 tmp['MSH']['MSH.4']['MSH.4.2'] = msg['MSH']['MSH.4']['MSH.4.2']; // Nro de documento
 tmp['MSH']['MSH.4']['MSH.4.3'] = msg['MSH']['MSH.4']['MSH.4.3']; // Tipo de documento (Predefinido 'RUT')
 //MSH5
 tmp['MSH']['MSH.5']['MSH.5.1'] = msg['MSH']['MSH.5']['MSH.5.1']; // Nombre aplicación destino
 //MSH6
-tmp['MSH']['MSH.6']['MSH.6.1'] = msg['MSH']['MSH.6']['MSH.6.1']; // Cod. Establecimiento (Predefinido '0' Fonasa)  
-tmp['MSH']['MSH.6']['MSH.6.2'] = msg['MSH']['MSH.6']['MSH.6.2']; // Rut Fonasa (predefinido 616030000)
-tmp['MSH']['MSH.6']['MSH.6.3'] = msg['MSH']['MSH.6']['MSH.6.3']; // Tipo de documento (Predefinido 'RUT')
+tmp['MSH']['MSH.6']['MSH.6.1'] = "0"; // Cod. Establecimiento que recibe(Predefinido '0' Fonasa)  
+tmp['MSH']['MSH.6']['MSH.6.2'] = "616030000"; // Rut Fonasa (predefinido 616030000)
+tmp['MSH']['MSH.6']['MSH.6.3'] = "RUT"; // Tipo de documento (Predefinido 'RUT')
 // MSH7
-tmp['MSH']['MSH.7']['MSH.7.1'] = tmp['MSH']['MSH.7']['MSH.7.1']; //Fecha-hora del mensaje(YYYYMMDDhhmmss[+,-]zzzz)
+tmp['MSH']['MSH.7']['MSH.7.1'] = ISODate(); //Fecha-hora del mensaje(YYYYMMDDhhmmss[+,-]zzzz)
 // MSH8
 tmp['MSH']['MSH.8']['MSH.8.1'] = msg['MSH']['MSH.8']; //vacío
 // MSH9
@@ -33,7 +46,7 @@ tmp['MSH']['MSH.12']['MSH.12.1'] = msg['MSH']['MSH.12']['MSH.12.1']; // ID de ve
 
 //ENV1
 tmp['EVN']['EVN.1']['EVN.1.1'] = msg['EVN']['EVN.1']['EVN.1.1'];// Tipo de evento (tabla 18-HL7 0003)
-tmp['EVN']['EVN.2']['EVN.2.1'] = msg['EVN']['EVN.2']['EVN.2.1'];// Hora-Fecha del evento (YYYYMMDDhhmmss[+-]ZZZZ)
+tmp['EVN']['EVN.2']['EVN.2.1'] = ISODate();// Hora-Fecha del evento (YYYYMMDDhhmmss[+-]ZZZZ)
 
 //PID1
 tmp['PID']['PID.1']['PID.1.1'] = msg['PID']['PID.1']; //vacío
@@ -76,7 +89,7 @@ tmp['PR1']['PR1.1']['PR1.1.1'] = msg['PR1']['PR1.1']['PR1.1.1'];//Número de tra
 tmp['PR1']['PR1.2']['PR1.2.1'] = msg['PR1']['PR1.2'];//Vacío
 tmp['PR1']['PR1.3']['PR1.3.1'] = msg['PR1']['PR1.3']['PR1.3.1'];//Código tipo de encuentro (tabla 0004)
 tmp['PR1']['PR1.4']['PR1.4.1'] = msg['PR1']['PR1.4'];//Vacío
-tmp['PR1']['PR1.5']['PR1.5.1'] = msg['PR1']['PR1.5']['PR1.5.1'];//Hora-Fecha del evento (YYYYMMDDhhmmss[+-]ZZZZ)
+tmp['PR1']['PR1.5']['PR1.5.1'] = ISODate();//Hora-Fecha del evento (YYYYMMDDhhmmss[+-]ZZZZ)
 
 //IN1
 tmp['IN1']['IN1.1']['IN1.1.1'] = msg['IN1']['IN1.1']['IN1.1.1'];//Contador de segmento(predeterminado 1)
