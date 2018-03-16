@@ -16,7 +16,7 @@ function ISODate(){
 }
 
 tmp['MSH']['MSH.1'] = "|"; // Separador de campo
-tmp['MSH']['MSH.2'] = "^~\&"; // Codificación de caracteres
+tmp['MSH']['MSH.2'] = "^~\\&"; // Codificación de caracteres
 tmp['MSH']['MSH.3']['MSH.3.1'] = "SW_FONASA"; // Nombre aplicación que envía
 //MSH4
 tmp['MSH']['MSH.4']['MSH.4.1'] = "0"; // Cod. establecimiento (Predefinido '0 Fonasa')
@@ -74,9 +74,7 @@ tmp['PV1']['PV1.20']['PV1.20.1'] = msg['PV1']['PV1.20']['PV1.20.1'].toString();/
 
 //PR1
 tmp['PR1']['PR1.1']['PR1.1.1'] = msg['PR1']['PR1.1']['PR1.1.1'].toString();//Número de transacción(incremental)
-tmp['PR1']['PR1.2'] = []; //Vacío
 tmp['PR1']['PR1.3']['PR1.3.1'] = msg['PR1']['PR1.3']['PR1.3.1'].toString();//Código tipo de encuentro (tabla 0004)
-tmp['PR1']['PR1.4'] = []; //Vacío
 tmp['PR1']['PR1.5']['PR1.5.1'] = ISODate();//Hora-Fecha del evento (YYYYMMDDhhmmss[+-]ZZZZ)
 
 tmp['IN1']['IN1.1']['IN1.1.1'] = msg['IN1']['IN1.1']['IN1.1.1'].toString();//Contador de segmento(predeterminado 1)
