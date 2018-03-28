@@ -1,0 +1,109 @@
+{
+   "MSH": {
+      "MSH.1": "|",
+      "MSH.2": "^~\\&",
+      "MSH.3": {
+         "MSH.3.1": "SW_Asc"
+      },
+      "MSH.4": {
+         "MSH.4.1": "544813254",
+         "MSH.4.2": "568679860",
+         "MSH.4.3": "RUT"
+      },
+      "MSH.5": {
+         "MSH.5.1": "SW_FONASA" // Aplicación que recibe
+      },
+      "MSH.6": {
+         "MSH.6.1": "0", // Codigo establecimiento (0 para Fonasa por defecto)
+         "MSH.6.2": "616030000", // Rut de Fonasa
+         "MSH.6.3": "RUT" // TIpo universal ID
+      },
+      "MSH.7": {
+         "MSH.7.1": "20171123164500-0400" // Fecha y hora del mensaje (YYYYMMDDhhmmss+-ZZZZ)
+      },
+      "MSH.9": {
+         "MSH.9.1": "BAR", // ID ACK, ADT o BAR (tabla 0076)
+         "MSH.9.2": "P10", // Valor (tabla 0003)
+         "MSH.9.3": "BAR_P10" // Valor (tabla 0354)
+      },
+      "MSH.10": {
+         "MSH.10.1": "000001" // Número de control
+      },
+      "MSH.11": {
+         "MSH.11.1": "P" // ID de procesamiento (P de producción) - Asclepio
+      },
+      "MSH.12": {
+         "MSH.12.1": "2.5.1" // ID de la versión
+      }
+   },
+   "EVN": {
+      "EVN.1": {
+         "EVN.1.1": "P10" // Tipo de evento (Tabla 18 - Anexo 6.3 guía validación)
+      },
+      "EVN.2": {
+         "EVN.2.1": "20171123164500-0400" // Hora y fecha del evento (YYYYMMDDhhmmss+-ZZZZ)
+      }
+   },
+   "PID":{ 
+      "PID.3":{
+         "PID.3.1": "13453567", // Run del paciente sin digito verificador - Asclepio
+         "PID.3.2": "K", // Digito verificador del rut
+         "PID.3.4": "RegistroCivil", // Entidad que emite el rut (Temporalmente string "RegistroCivil")
+         "PID.3.5": "NI", // Tipo de documento (tabla 20)
+         "PID.3.9": {
+            "PID.3.9.1": "152", // Código país emisor del documento
+            "PID.3.9.2": "Chile", // Pais emisor de documento
+            "PID.3.9.3": "ISO3166-1" // NOrma utilizada para codificación de país
+         }
+      },
+      "PID.5": { 
+         "PID.5.1": "Perez",
+         "PID.5.2": "Rigoberto",
+         "PID.5.3": "Ignacio"
+      },
+      "PID.6": {
+         "PID.6.1": "Gonzalez"
+      }
+   },
+   "GP1":{
+      "GP1.1": {
+         "GP1.1.1": "0" // 0 Para prueba / 1 Para proceso abierto en validacion
+      }
+   },
+   "PR1": {
+      "PR1.1": {
+         "PR1.1.1": "0001" //
+      },
+      "PR1.3": {
+         "PR1.3.1": "0101300", //
+         "PR1.3.2": "Consulta_Especialista", //
+         "PR1.3.3": "99000", //
+         "PR1.3.4": "0", //
+         "PR1.3.5": "No_aplica", //
+         "PR1.3.6": "99001", //
+      },
+      "PR1.4": {
+         "PR1.4.1": "02080801" //
+      },
+      "PR1.5": {
+         "PR1.5.1": "20171123170100-0400" //Fecha y hora del encuentro YYYYMMDDhhmmss+-ZZZZ 
+      },
+      "PR1.19": {
+         "PR1.19.1": "568679860" //
+      }
+   },
+   "GP2":{
+      "GP2.1": {
+         "GP2.1.1": "0101300" 
+      },
+      "GP2.2": {
+         "GP2.2.1": "1" 
+      },
+      "GP2.3": {
+         "GP2.3.1": "45000" 
+      },
+      "GP2.9": {
+         "GP2.9.1": "N" 
+      },
+   }
+}
