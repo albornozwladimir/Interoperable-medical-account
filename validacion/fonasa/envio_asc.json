@@ -1,24 +1,18 @@
 {
-  "PID": {
-    "PID.3": {
-      "PID.3.1": "13453567",
-      "PID.3.2": "K"
+  "PAT": {
+    "PAT.1": {
+      "PAT.1.1": "13453567",
+      "PAT.1.2": "K"
     },
-    "PID.5": {
-      "PID.5.1": "Perez",
-      "PID.5.2": "Rigoberto",
-      "PID.5.3": "Ignacio"
-    },
-    "PID.6": {
-      "PID.6.1": "Gonzalez"
+    "PAT.2": {
+      "PAT.2.1": "Perez",
+      "PAT.2.2": "Gonzalez",
+      "PAT.2.3": "Rigoberto",
+      "PAT.2.4": "Ignacio"
     }
   },
-  "PV1": {
-    "PV1.18": {
-      "PV1.18.1":"00"
-    },
-    "PV1.20": {
-      "PV1.20.1":"A"
-    }
+  "FON": {
+    "FON.1": "00",
+    "FON.2": "A"
   }
 }
